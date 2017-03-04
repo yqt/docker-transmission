@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/with-contenv sh
 
 set -ex
 SETTINGS=/etc/transmission-daemon/settings.json
@@ -21,4 +21,4 @@ fi
 
 unset PASSWORD USERNAME
 
-nohup /usr/bin/transmission-daemon --foreground --config-dir /etc/transmission-daemon
+exec /usr/bin/transmission-daemon --foreground --config-dir /etc/transmission-daemon
